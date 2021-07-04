@@ -1,3 +1,5 @@
+// ----- App Functions ---
+
 function diceRoll1() {
   let randomNumber1 = Math.floor(Math.random() * 6 + 1);
 
@@ -48,14 +50,24 @@ function winner() {
   }
 }
 
-// ----- Event Listener ---
+// ----- Event Listeners ---
 
-btn = document.querySelector('#btn');
+roll = document.querySelector('#roll');
+reset = document.querySelector('#reset');
 
-btn.addEventListener('click', (e) => {
+roll.addEventListener('click', (e) => {
+    e.preventDefault();
+    winner();
+  });
+
+
+reset.addEventListener('click', (e) => {
   e.preventDefault();
-  document.querySelectorAll('.dice')[0 & 1].innerHTML =
-    '<p>Refresh to Roll Again</p>';
+  document.querySelectorAll('.dice')[0].innerHTML =
+    '<p>Hit the Roll Again button</p>';
+    document.querySelectorAll('.dice')[1].innerHTML =
+    '<p></p>';
 });
 
-winner();
+
+
