@@ -11,6 +11,9 @@ function rollDice() {
     .querySelector('.dice2')
     .setAttribute('src', `images/dice${randomNumber2}.png`);
 
+  document.querySelector('.dice p').innerHTML = 'Player 1';
+  document.querySelector('#p2').innerText = 'Player 2';
+
   changeTitle(randomNumber1, randomNumber2);
 }
 
@@ -36,7 +39,9 @@ roll.addEventListener('click', (e) => {
 
 reset.addEventListener('click', (e) => {
   e.preventDefault();
-  document.querySelector('h1').innerText = 'Feeling Lucky Punk!';
+  document.querySelector('h1').innerText = 'Hit the Roll Button Cowboy!';
+  document.querySelector('.dice p').innerHTML = '';
+  document.querySelector('#p2').innerText = '';
   document.querySelector('.dice1').setAttribute('src', '/images/dice6.png');
   document.querySelector('.dice2').setAttribute('src', '/images/dice6.png');
 });
