@@ -42,6 +42,16 @@ reset.addEventListener('click', (e) => {
   document.querySelector('h1').innerText = 'Hit the Roll Button Cowboy!';
   document.querySelector('.dice p').innerHTML = '';
   document.querySelector('#p2').innerText = '';
-  document.querySelector('.dice1').setAttribute('src', '/images/dice6.png');
-  document.querySelector('.dice2').setAttribute('src', '/images/dice6.png');
+  document
+    .querySelector('.dice1')
+    .setAttribute(
+      'src',
+      'https://github.com/Andi-Berisha/Dice-Game/blob/master/images/dice6.png?raw=true'
+    );
+  document
+    .querySelector('.dice2')
+    .setAttribute(
+      'src',
+      'https://github.com/Andi-Berisha/Dice-Game/blob/master/images/dice6.png?raw=true'
+    );
 });
